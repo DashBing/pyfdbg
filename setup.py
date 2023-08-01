@@ -1,14 +1,15 @@
 import setuptools
+from src.pyfdbg.data import version_in as version
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="包名",
-    version="0.0.1",  #版本
+    name="pyfdbg",
+    version=version,  #版本
     author="DashBing",
     author_email="mcbbkf@outlook.com",
-    description="简短摘要",
+    description="一个简单且强大、易于使用的调试器",
     long_description=long_description,
     long_description_content_type="text/markdown",
     #scripts=[],
@@ -29,12 +30,16 @@ setuptools.setup(
         "Operating System :: OS Independent",
         #"Operating System :: Microsoft :: Windows",
         #"Natural Language :: English",
-        #"Natural Language :: Chinese (Simplified)",
+        "Natural Language :: Chinese (Simplified)",
     ],
-    #install_requires=[],  #依赖项定义
-    #entry_points={'console_scripts': ['name = pkg:function',],},  #scripts定义
+    install_requires=["phap>=3.1.0"],  #依赖项定义
+    entry_points = {
+        'console_scripts': [
+            'pyfdbg = pyfdbg:main',
+        ],
+    },  #scripts定义
     package_dir={"": "src"},  #包名和值的目录 有效包存放根目录
     packages=setuptools.find_packages(where="src"),
-    python_requires=">=3.11",  #支持版本
+    python_requires=">=3.9",  #支持版本
     #platforms=["Windows"],  #支持系统
 )
