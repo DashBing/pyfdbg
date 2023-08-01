@@ -1,5 +1,5 @@
 author = "DashBing(大师)"
-copyright = "(c) %s 保留所有权利"%author
+copyright = "%s 保留所有权利"%author
 version_class = "Alpha"
 resource_code = "1"
 version_code = "0.0.1"
@@ -14,13 +14,19 @@ else:
 def_compler = "g++"
 
 copyr_msg = '''
-
+\033[1;32m
    ____        _____ ____  _
   |  _ \ _   _|  ___|  _ \| |__   __ _
   | |_) | | | | |_  | | | | '_ \ / _` |
   |  __/| |_| |  _| | |_| | |_) | (_| |
   |_|    \__, |_|   |____/|_.__/ \__, |
          |___/                   |___/
-                                         {version}
-                                Copyright {copyright}
+\033[1;31m                                         \033[1;34m{version}\033[1;33m
+                                Copyright \033[1;33m(C)\033[1;31m {copyright}
+
 '''
+
+help_msg = ''''''
+
+if __name__ == "__main__":
+    print(copyr_msg.format(version=version, copyright=copyright))
