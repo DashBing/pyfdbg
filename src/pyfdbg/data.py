@@ -22,7 +22,7 @@ copyr_msg = '''
   |_|    \__, |_|   |____/|_.__/ \__, |
          |___/                   |___/
 \033[1;31m                                         \033[1;34m{version}\033[1;33m
-                                Copyright \033[1;33m(C)\033[1;31m {copyright}
+                                Copyright \033[1;33m(C)\033[1;31m {copyright}\033[0m
 
 '''
 
