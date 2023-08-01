@@ -29,7 +29,7 @@ def main(argv):
     if ("help" in argv or "h" in argv) or ("HELP" in argv or "H" in argv):
         print(help_msg)
     elif len(argv["@noname"]) > 0:
-        debuger(argv)
+        debuger(argv, dbgarg)
     else:
         shell()
 
