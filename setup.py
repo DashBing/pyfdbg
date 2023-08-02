@@ -1,12 +1,12 @@
 import setuptools
-from src.pyfdbg.data import version_in as version
+#from src.pyfdbg.data import version_in as version
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="pyfdbg",
-    version=version,  #版本
+    version="0.1.0",  #版本
     author="DashBing",
     author_email="mcbbkf@outlook.com",
     description="一个简单且强大、易于使用的调试器",
